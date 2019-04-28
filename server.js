@@ -14,3 +14,8 @@ const server = http.createServer(requestHandler);
     if (err) throw err;
     console.log('Server is listening on port ${port}');
   });
+
+var fs = require('fs');
+
+fs.appendFile('hello-world.txt', 'Hello to this great world',
+function (err) { if (err) throw err; console.log('Complete')});
